@@ -1,0 +1,7 @@
+os: windows
+language: python
+service: mysql
+script: 
+- python app.py
+- python -m pytest -v -s
+install: pip install -r requirements . txt

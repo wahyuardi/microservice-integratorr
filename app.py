@@ -9,9 +9,11 @@ from flask_cors import CORS
 
 import pymysql
 import os
+import pytest
 import sys
 from datetime import timedelta
 import config
+
 
 sys.path.insert(0, os.path.dirname(__file__))
 
@@ -224,6 +226,14 @@ def dosen():
         return render_template ('dosen.html', data = data)
     else :
         return render_template('login.html')
+
+@app.route('/test')
+def test():
+    return "Works!"
+
+@app.route('/test')
+def a():
+    return "a"
 
 #if __name__ == '__main__'
 #    app.run(debug=True, port=3306)
