@@ -1,7 +1,6 @@
-os: windows
+sudo : enabled
 language: python
 service: mysql
-script: 
-- python app.py
-- python -m pytest -v -s
+script: python app.py
+#- python -m pytest -v -s
 install: pip install -r requirements . txt
